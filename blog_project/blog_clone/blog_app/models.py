@@ -25,7 +25,7 @@ class Post(models.Model):
         return self.title
 
 
-class Comments(model.Models):
+class Comment(model.Models):
     post = models.ForeignKey('blog.Post',related_name='comments', on_delete=models.CASCADE)
     author = models.CharField(max_length=200)
     text = models.TextField()
@@ -34,7 +34,7 @@ class Comments(model.Models):
 
 
     def approve(self):
-        self.approved_comments = True
+        self.approved_comment = True
         self.save()
 
     def get_absolute_url(self):
