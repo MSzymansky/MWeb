@@ -3,7 +3,19 @@
   font-size: 1.5em;
   margin-bottom: 10px;
 }
-.bigbrand{
+
+.postdate{
+  text-align: center;
+}
+
+.posttitle{
+  font-family: 'Fire Code', sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+.postcontent{
+  font-family: 'Fira Code';
   font-size: 1.5em;
 }
 
@@ -12,10 +24,7 @@
   margin-right: auto;
 }
 
-body{
-  background: #e7e7e7;
-  font-family: Arial, Helvetica, Sans-serif;
-  text-align: center;
-  padding: 5px;
-  margin: 0;
+.btn-comment{
+  position: absolute;
+  right: 0px;
 }
