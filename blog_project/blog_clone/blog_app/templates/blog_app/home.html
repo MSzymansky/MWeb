@@ -23,7 +23,15 @@
           75%{background-color: #f35}
           100%{background-color: #864cbf}
         }
-
+        .content {
+          position: absolute;
+          width: 0px;
+          height: 200px;
+          top: 50%;
+          left: 50%;
+          margin-left: -150px;
+          margin-top: -150px;
+        }
         .header{
           background-color: rgba(0,0,0,.2);
           margin:0;
@@ -62,6 +70,7 @@
           position: absolute;
           margin-top:15px;
           margin-left: 10px;
+
         }
         </style>
         <!-- Latest compiled and minified CSS -->
@@ -86,11 +95,15 @@
 
 
 <body class="loader">
-  <div class="logo"><a href="{% url 'post_list' %}">Blog Clone Site</a></div>
+
+<header id='showcase'>
+
+</header>
+
   <div class="header">
     <nav>
     <ul>
-        <li><a href="{% url 'about'%}">About</a></li>
+        <li><a class='nav navbar-center' href="{% url 'post_list' %}" ><span class="glyphicon glyphicon-home"></span></a></li>
         <li><a href="https://github.com/MSzymansky">GitHub</a></li>
         {% if user.is_authenticated %}
         <li><a href="{% url 'post_new' %}" >New Post</a></li>
@@ -103,6 +116,7 @@
     </ul>
   </div>
   </nav>
+  <div class="content">
   {# The actual blog posts#}
         <div class="content container">
             <div class="row">
@@ -112,7 +126,7 @@
                     {% endblock %}
 
                   </div>
-
+                    </div>
                 </div>
             </div>
         </div>
