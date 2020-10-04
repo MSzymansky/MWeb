@@ -12,4 +12,3 @@ class UserCreateForm(UserCreationForm):
         super().__init__(*args,**kwargs)
         self.fields['username'].label = 'Display Name'
         self.fields['email'].label = 'Email Address'
-        

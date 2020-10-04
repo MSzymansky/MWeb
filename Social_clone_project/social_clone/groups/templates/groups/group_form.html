@@ -1,7 +1,7 @@
 {% extends 'groups/group_base.html' %}
 
 {% block group_content %}
-<h4>Create a new group!</h4>
+<h4 style = 'text-align:center'>Create a new group!</h4>
 
 <form action='{% url 'groups:create' %}' method="post" id='groupForm'>
   {% csrf_token %}
